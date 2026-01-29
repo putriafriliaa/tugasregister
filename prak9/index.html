@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniShop</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo" onclick="navigate('home')">MiniShop</div>
+  <div class="nav-actions">
+    <span id="user-info"></span>
+    <button id="link-login" class="link" onclick="navigate('login')">Login</button>
+    <button id="link-logout" class="link" onclick="navigate('logout')">Logout</button>
+    <button class="cart-btn" onclick="openCart()">
+  Cart <span id="cart-count">0</span>
+   </button>  
+</div>
+</header>
+
+<main id="app" class="app"></main>
+<!-- OVERLAY -->
+<div id="overlay" class="overlay" onclick="closeCart()"></div>
+
+<!-- SIDEBAR CART -->
+<div id="cart-sidebar" class="cart-sidebar"></div>
+
+<script src="js/state.js"></script>
+<script src="js/ui/uiHome.js"></script>
+<script src="js/ui/uiLogin.js"></script>
+<script src="js/ui/uiRegister.js"></script>
+<script src="js/ui/uiCart.js"></script>
+<script src="js/ui/uiCheckout.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
